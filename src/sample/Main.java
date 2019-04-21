@@ -1,6 +1,7 @@
 package sample;
 
 import constants.ApplicationConstants;
+import helper.SpliteWrapper;
 import helper.Utility;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -23,6 +24,8 @@ public class Main extends Application {
 
     public static void main (String[] args) {
         Utility.createDirectory(ApplicationConstants.APP_FOLDER_DATA_PATH);
+        SpliteWrapper spliteWrapper = new SpliteWrapper();
+        spliteWrapper.createAllTables();
         launch(args);
     }
 }
